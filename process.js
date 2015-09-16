@@ -13,12 +13,12 @@ var banner = ['/**',
   ' */',
   ''].join('\n');
 
-function process(browser) {
+function process(browser, dir) {
   return gulp.src('./src/ex.js')
     .pipe( tributary( gulp.src('./src/*/' + browser + '.js').pipe(concat('scripts')) ) )
     .pipe(uglify())
     .pipe(header(banner, {pkg: pkg}))
-    .pipe(gulp.dest('./dist/' + browser + '/'));
+    .pipe(gulp.dest((dir||'./dist/') + browser + '/'));
 }
 
 module.exports = process;

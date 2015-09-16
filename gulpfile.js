@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var del = require('del');
 var process = require('./process');
+var processAll = require('./index');
 
 var paths = {
   scripts: ['src/**/*.js', 'src/**/**/*.js']
@@ -29,4 +30,8 @@ gulp.task('safari', function () {
   process('safari');
 });
 
-gulp.task('default', ['chrome','firefox','safari']);
+gulp.task('all', function () {
+  processAll();
+});
+
+gulp.task('default', ['all']);
