@@ -3,7 +3,7 @@
 
 var ex = {};
 
-/* include "scripts.js" */
+/* include "scripts" */
 window.ex = ex;
 
 })(window);
