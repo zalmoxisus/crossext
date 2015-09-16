@@ -1,0 +1,1 @@
+Cross-browser extension library

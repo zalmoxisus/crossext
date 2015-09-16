@@ -1,0 +1,25 @@
+{
+  "name": "Ex",
+  "version": "0.0.1",
+  "description": "Cross-browser extension library",
+  "author": "Mihail Diordiev (https://github.com/zalmoxisus)",
+  "license": "MIT",
+  "scripts": {
+    "gulp": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zalmoxisus/ex"
+  },
+  "devDependencies": {
+    "del": "^1.2.1",
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-header": "^1.7.1",
+    "gulp-tributary": "^1.1.2",
+    "gulp-uglify": "^1.4.1"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  }
+}
