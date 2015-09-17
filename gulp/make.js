@@ -4,7 +4,7 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var tributary = require('gulp-tributary');
 
-var pkg = require('./package.json');
+var pkg = require('../package.json');
 var banner = ['/**',
   ' * Ex - <%= pkg.description %>',
   ' * @version v<%= pkg.version %>',
@@ -13,7 +13,7 @@ var banner = ['/**',
   ' */',
   ''].join('\n');
 
-function process(browser, dir) {
+function make(browser, dir) {
   return gulp.src('./src/ex.js')
     .pipe( tributary( gulp.src('./src/*/' + browser + '.js').pipe(concat('scripts')) ) )
     .pipe(uglify())
@@ -21,4 +21,4 @@ function process(browser, dir) {
     .pipe(gulp.dest((dir||'./dist/') + browser + '/'));
 }
 
-module.exports = process;
+module.exports = make;

@@ -1,7 +1,7 @@
 var gulp = require('gulp');
 var del = require('del');
-var process = require('./process');
-var processAll = require('./index');
+var make = require('./gulp/make');
+var ex = require('./index');
 
 var paths = {
   scripts: ['src/**/*.js', 'src/**/**/*.js']
@@ -19,19 +19,19 @@ gulp.task('clean', function (cb) {
 });
 
 gulp.task('chrome', function () {
-  process('chrome');
+  make('chrome');
 });
 
 gulp.task('firefox', function () {
-  process('firefox');
+  make('firefox');
 });
 
 gulp.task('safari', function () {
-  process('safari');
+  make('safari');
 });
 
 gulp.task('all', function () {
-  processAll();
+  ex.make();
 });
 
 gulp.task('default', ['all']);

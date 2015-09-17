@@ -1,9 +1,11 @@
-var process = require('./process');
+var make = require('./gulp/make');
 
-function createEx(dir) {
+function makeEx(dir) {
   ['chrome','firefox','safari'].map( function(browser){
-    process(browser, dir);
+    make(browser, dir);
   });
 }
 
-module.exports = createEx;
+module.exports = {
+  make: makeEx
+};
