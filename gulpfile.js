@@ -34,4 +34,10 @@ gulp.task('all', function () {
   ex.make();
 });
 
+gulp.task('manifest', function () {
+  var srcJSON = require('./.tmp/ex.json');
+  var pkgJSON = require('./package.json');
+  ex.manifest(srcJSON, pkgJSON);
+});
+
 gulp.task('default', ['all']);
