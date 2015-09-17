@@ -1,8 +1,9 @@
 {
   "name": "gulp-ex",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Cross-browser extension library. In early development stage yet.",
   "author": "Mihail Diordiev (https://github.com/zalmoxisus)",
+  "homepage": "https://github.com/zalmoxisus/ex",
   "license": "MIT",
   "scripts": {
     "test": "mocha"
@@ -20,7 +21,7 @@
     "browser",
     "crossbrowser"
   ],
-  "devDependencies": {
+  "dependencies": {
     "del": "^1.2.1",
     "gulp": "^3.9.0",
     "gulp-concat": "^2.6.0",
