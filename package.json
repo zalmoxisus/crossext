@@ -1,7 +1,7 @@
 {
   "name": "gulp-ex",
-  "version": "0.0.4",
-  "description": "Cross-browser extension library. In early development stage yet.",
+  "version": "0.0.5",
+  "description": "Cross-browser extension library",
   "author": "Mihail Diordiev (https://github.com/zalmoxisus)",
   "homepage": "https://github.com/zalmoxisus/ex",
   "license": "MIT",
